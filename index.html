@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>よくあるご質問（FAQ） | Sumyca</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-14KSQX5GFF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-14KSQX5GFF');
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'メイリオ', sans-serif;
+      color: #333;
+      background-color: #fff;
+      line-height: 1.8;
+      letter-spacing: 0.04em;
+    }
+
+    /* ========== Header ========== */
+    .header {
+      background: #fff;
+      border-bottom: 1px solid #e0e0e0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: #009C96;
+      text-decoration: none;
+      letter-spacing: 2px;
+    }
+
+    .header-nav {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .header-nav a {
+      color: #555;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .header-nav a:hover {
+      color: #009C96;
+    }
+
+    /* ========== Hero ========== */
+    .hero {
+      background: linear-gradient(135deg, #009C96 0%, #00b4ad 50%, #00c9c1 100%);
+      padding: 64px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.08) 0%, transparent 50%);
+    }
+
+    .hero h1 {
+      color: #fff;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+      position: relative;
+    }
+
+    .hero p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 15px;
+      position: relative;
+    }
+
+    /* ========== Search ========== */
+    .search-section {
+      max-width: 640px;
+      margin: -28px auto 0;
+      padding: 0 20px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .search-box {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 6px;
+      display: flex;
+    }
+
+    .search-box input {
+      flex: 1;
+      border: none;
+      padding: 12px 16px;
+      font-size: 15px;
+      outline: none;
+      border-radius: 6px;
+      color: #333;
+    }
+
+    .search-box input::placeholder {
+      color: #aaa;
+    }
+
+    .search-box button {
+      background: #009C96;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, box-shadow 0.2s;
+      white-space: nowrap;
+    }
+
+    .search-box button:hover {
+      background: #008a85;
+      box-shadow: 0 2px 8px rgba(0, 156, 150, 0.3);
+    }
+
+    /* ========== Category Tabs ========== */
+    .category-nav {
+      max-width: 1024px;
+      margin: 48px auto 0;
+      padding: 0 20px;
+    }
+
+    .category-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .category-tab {
+      padding: 10px 20px;
+      border: 2px solid #e0e0e0;
+      border-radius: 30px;
+      background: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      color: #666;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .category-tab:hover {
+      border-color: #009C96;
+      color: #009C96;
+    }
+
+    .category-tab.active {
+      background: #009C96;
+      border-color: #009C96;
+      color: #fff;
+    }
+
+    /* ========== FAQ Content ========== */
+    .faq-container {
+      max-width: 800px;
+      margin: 40px auto 80px;
+      padding: 0 20px;
+    }
+
+    .faq-category {
+      margin-bottom: 48px;
+    }
+
+    .faq-category-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #333;
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+      border-bottom: 3px solid #009C96;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .faq-category-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: #eef6f5;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    .faq-category-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: #009C96;
+    }
+
+    /* Accordion */
+    .faq-item {
+      border: 1px solid #e8e8e8;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      background: #fff;
+      transition: box-shadow 0.2s;
+      overflow: hidden;
+    }
+
+    .faq-item:hover {
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .faq-question {
+      display: flex;
+      align-items: flex-start;
+      padding: 18px 20px;
+      cursor: pointer;
+      user-select: none;
+      gap: 14px;
+    }
+
+    .faq-question:hover {
+      background: #fafafa;
+    }
+
+    .q-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: #009C96;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .q-text {
+      flex: 1;
+      font-size: 15px;
+      font-weight: 600;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    .q-toggle {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      transition: transform 0.3s ease;
+      fill: #999;
+    }
+
+    .faq-item.open .q-toggle {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 600px;
+    }
+
+    .faq-answer-inner {
+      padding: 0 20px 20px 62px;
+    }
+
+    .a-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: #f0f0f0;
+      color: #009C96;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-right: 12px;
+      vertical-align: top;
+    }
+
+    .a-text {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.9;
+    }
+
+    .a-text a {
+      color: #009C96;
+      text-decoration: underline;
+    }
+
+    /* ========== CTA Section ========== */
+    .cta-section {
+      background: #eef6f5;
+      padding: 56px 20px;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 12px;
+    }
+
+    .cta-section p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 28px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .cta-btn-primary {
+      background: #009C96;
+      color: #fff;
+    }
+
+    .cta-btn-primary:hover {
+      background: #008a85;
+      box-shadow: 0 4px 16px rgba(0, 156, 150, 0.3);
+    }
+
+    .cta-btn-secondary {
+      background: #fff;
+      color: #009C96;
+      border: 2px solid #009C96;
+    }
+
+    .cta-btn-secondary:hover {
+      background: #eef6f5;
+    }
+
+    /* ========== Footer ========== */
+    .footer {
+      background: #2d2d2d;
+      color: #ccc;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .footer-inner {
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .footer-links a {
+      color: #aaa;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      color: #777;
+    }
+
+    /* ========== Responsive ========== */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 24px;
+      }
+
+      .header-nav {
+        display: none;
+      }
+
+      .category-tabs {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .faq-answer-inner {
+        padding: 0 16px 16px 16px;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="https://www.sumyca.com/" class="logo">Sumyca</a>
+      <nav class="header-nav">
+        <a href="https://www.sumyca.com/">物件を探す</a>
+        <a href="#">ご利用ガイド</a>
+        <a href="#" style="color: #009C96; font-weight: 700;">よくあるご質問</a>
+        <a href="#">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>よくあるご質問</h1>
+    <p>Sumycaのマンスリーマンションに関する疑問にお答えします</p>
+  </section>
+
+  <!-- Search -->
+  <div class="search-section">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="キーワードで質問を検索..." oninput="filterFAQ(this.value)">
+      <button onclick="filterFAQ(document.getElementById('searchInput').value)">検索</button>
+    </div>
+  </div>
+
+  <!-- Category Tabs -->
+  <nav class="category-nav">
+    <div class="category-tabs">
+      <button class="category-tab active" onclick="filterCategory('all', this)">すべて</button>
+      <button class="category-tab" onclick="filterCategory('property-info', this)">空室・物件情報</button>
+      <button class="category-tab" onclick="filterCategory('pricing', this)">料金・費用</button>
+      <button class="category-tab" onclick="filterCategory('requirements', this)">検討・申込条件</button>
+      <button class="category-tab" onclick="filterCategory('application', this)">申込・予約</button>
+      <button class="category-tab" onclick="filterCategory('contract', this)">契約内容・書類</button>
+      <button class="category-tab" onclick="filterCategory('pre-checkin', this)">入居前の最終確認</button>
+      <button class="category-tab" onclick="filterCategory('facilities', this)">物件の利用・設備</button>
+      <button class="category-tab" onclick="filterCategory('other', this)">システム・その他</button>
+    </div>
+  </nav>
+
+  <!-- FAQ Content -->
+  <main class="faq-container">
+
+    <!-- 空室・物件情報 -->
+    <section class="faq-category" data-category="property-info">
+      <h2 class="faq-category-title">
+        <span class="faq-category-icon">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z"/></svg>
+        </span>
+        空室・物件情報について
+      </h2>
+
+      <div class="faq-item" data-keywords="空室 確認 物件 状況">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span class="q-badge">Q</span>
+          <span class="q-text">特定の物件の現在の空室状況はどうやって確認できますか？</span>
+          <svg class="q-toggle" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <span class="a-badge">A</span>
+            <span class="a-text">
+              特定の物件の最新の空室状況につきましては、各掲載サイトの「お問い合わせ」ボタンから個別にお問い合わせいただけます。<br><br>
+              当社の物件は複数のプラットフォームに掲載しており、繁忙期は需要が高まるため、予約が早く埋まる傾向がございます。<br>
+              空室状況は常に最新情報を反映できるよう努めておりますが、更新が間に合わない場合がございます。あらかじめご了承くださいませ。
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-keywords="契約日 最短 入居日 翌日">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span class="q-badge">Q</span>
+          <span class="q-text">契約日から最短入居日はいつですか？</span>
+          <svg class="q-toggle" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <span class="a-badge">A</span>
+            <span class="a-text">
+              空室がある場合に限り、同日の正午12時までにお申し込みが完了していれば、最短で翌日のご入居が可能です。<br>
+              ただし、審査内容によっては、ご入居のご案内までに最長4営業日ほどお時間をいただく場合がございます。あらかじめご了承くださいませ。<br>
+              ※審査の詳細につきましては開示しておりません。何卒ご理解のほどお願い申し上げます。
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-keywords="写真 設備 Wi-Fi 駐車場 詳細">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span class="q-badge">Q</span>
+          <span class="q-text">物件の写真や設備（Wi-Fi、駐車場など）の詳細を知りたい場合どちらから確認すればいいですか？</span>
+          <svg class="q-toggle" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <span class="a-badge">A</span>
+            <span class="a-text">
+              物件の写真や設備の詳細につきましては、Sumycaの各物件ページに掲載しております。設備・備品リストからご確認いただけます。<br>
+              なお、設備・備品の内容は整備等により変更となる場合がございます。個別での詳細確認には、お応えしかねますので、あらかじめご了承くださいませ。<br>
+              ※駐車場付きの物件は、台数に非常に限りがございます。ご希望の場合は、各物件ページの「お問い合わせ」ボタンから個別にお問い合わせいただけます。
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-keywords="比較 資料 まとめて 複数">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span class="q-badge">Q</span>
+          <span class="q-text">複数の物件を比較したい場合、まとめて資料を送ってもらえますか？</span>
+          <svg class="q-toggle" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <span class="a-badge">A</span>
+            <span class="a-text">
+              はい、可能でございます。ご希望の詳細条件をお指示頂くことで、条件に見合った物件を複数ご紹介させて頂くことが出来ます。<br>
+              Sumycaトップページの「フォーム」もしくは「お問い合わせ」ボタンから、ご希望のエリア・ご予算・間取り/広さなど、ご記入の上送信くださいませ。<br>
+              ※ご希望条件に合う物件がない場合は、ご連絡を差し上げられない場合がございます。あらかじめご了承くださいませ。
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 料金・費用 -->
+    <section class="faq-category" data-category="pricing">
+      <h2 class="faq-category-title">
+        <span class="faq-category-icon">
+          <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+        </span>
+        料金・費用について
+      </h2>
+
+      <div class="faq-item" data-keywords="賃料 セール 適用 料金">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span class="q-badge">Q</span>
+          <span class="q-text">提示されている賃料（セール賃料）はどのように適用されますか？</span>
+          <svg class="q-toggle" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <span class="a-badge">A</span>
+            <span class="a-text">
+              セール賃料は、特定の期間にのみ適用されます。<br>
+              セール適用外の期間を含む日程でご予約される場合は、セール適用期間中はセール賃料、適用外の日数については通常料金を日割りで計算し、合計金額をご案内いたします。<br><br>
+              なお、サイトに掲載している価格は年間を通じた最低料金を表示しております。実際のご案内価格はシーズンにより変動する場合がございますので、あらかじめご了承くださいませ。
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-keywords="総額 費用 見積もり 賃料 光熱費 管理費">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span class="q-badge">Q</span>
+          <span class="q-text">総額費用（賃料、光熱費、管理費など）の正確な見積もりは依頼できますか？</span>
+          <svg class="q-toggle" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <span class="a-badge">A</span>
+            <span class="a-text">
+              はい、可能でございます。お見積もりはメールにてお送りさせていただきますので、各物件ページの「お問い合わせ」ボタンから個別にお問い合わせいただけます。
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-keywords="途中 退去 費用 返還 解約 早期">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span class="q-badge">Q</span>
+          <span class="q-text">契約期間中に途中で退去した場合、費用の返還はありますか？</span>
+          <svg class="q-toggle" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <span class="a-badge">A</span>
+            <span class="a-text">
+              ご入居開始後の早期解約をご希望の場合、一ヶ月分事前お解約手数割り減額となります。日割り精算は行いませんので、ご注意くださいませ。<br><br>
+              お申し出頂いた一ヶ月後にあたる月の料金は、ご返金出来かねます。<br>
+              その次の月以降の料金からご返還致します。<br><br>
+              〈例１〉<br>
+              入居日：１０月１０日、退去日：１２月１０日、解約申込時：１１月１０日<br>
+              →１月分をご返還されます。<br><br>
+              〈例２〉<br>
+              入居日：１０月１０日、退去日：１２月１０日、解約申込時：１０月２０日<br>
+              →２月分をご返還されます。<br><br>
+              〈例３〉<br>
+              入居日：１０月１０日、退去日：１１月１０日、解約申込時：１０月１０日<br>
+              返還はございません。
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-keywords="短期 長期 料金体系 マンスリー">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span class="q-badge">Q</span>
+          <span class="q-text">短期・長期利用で料金体系は変わりますか？</span>
+          <svg class="q-toggle" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <span class="a-badge">A</span>
+            <span class="a-text">
+              1泊あたりの料金は、30泊以上の短期滞在と、30泊以上のマンスリー契約で異なります。<br>
+              30泊未満のお宿泊の場合、1泊あたりの賃料は30泊以上のマンスリー料金より割高となります。<br>
+              そのため、2週間を超えるご滞在の場合は、30泊でご契約いただく方が結果的にお安くなる場合がございます。
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 検討・申込条件 -->
+    <section class="faq-category" data-category="requirements">
+      <h2 class="faq-category-title">
+        <span class="faq-category-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+        </span>
+        検討・申込条件について
+      </h2>
+
+      <div class="faq-item" data-keywords="内見 見学 物件見学">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span class="q-badge">Q</span>
+          <span class="q-text">内見・物件見学は可能ですか？</span>
+          <svg class="q-toggle" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <span class="a-badge">A</span>
+            <span class="a-text">
+              恐れ入りますが、当社は無人運営を行っている都合上、内見を行っておりません。<br>
+              ご希望に添えず申し訳ございません。<br>
+              掲載サイトにて、お部屋内のお写真や設置されている家具・家電の詳細を掲載しております。<br>
+              また、googlemapで周辺環境などもご確認いただき、お申し込みの判断をお願い致します。
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-keywords="申込 必要 資格 書類 身分証明書">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span class="q-badge">Q</span>
+          <span class="q-text">申込に必要な資格や書類（身分証明書など）は何ですか？</span>
+          <svg class="q-toggle" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <span class="a-badge">A</span>
+            <span class="a-text">
+              お申し込みに必要な書類は、国籍やお住まいの国によって異なります。詳しくは下記リンクからご参照いただけます。<br>
+              <a href="https://app.box.com/s/jmzonbwv0g9hwe7p74shwhbn5l4np6bc" target="_blank">https://app.box.com/s/jmzonbwv0g9hwe7p74shwhbn5l4np6bc</a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-keywords="予約 仮押さえ 仮予約">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span class="q-badge">Q</span>
+          <span class="q-text">予約または仮押さえをするにはどうすればいいですか？</span>
+          <svg class="q-toggle" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <span class="a-badge">A</span>
+            <span class="a-text">
+              お申し込みから退去まで、すべてオンラインで対応しております。<br>
+              ご予約をご希望の場合はメールアドレス宛にオンラインのお申し込みフォームをお送りさせていただきます。<br>
+              なお、お申し込み前の、お部屋の仮押さえは承っておりません。あらかじめご了承くださいませ。<br><br>
+              ご予約の流れは以下をご参照ください。<br><br>
+              〈お手続きの流れ〉<br>
+              ～お客様に行っていただく手順～<br>
+              ①お申込み希望のご連絡を ※この時点で初めて仮押さえが承れます。<br>
+              ②お申込みフォームへのご入力<br>
+              ③契約内容のご確認・同意<br>
+              ④お支払い（クレジットカード決済・銀行振込）
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-keywords="法人 契約 手続き 条件">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span class="q-badge">Q</span>
+          <span class="q-text">法人契約を希望していますが、手続きや条件は物件ごとに異なりますか？</span>
+          <svg class="q-toggle" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <span class="a-badge">A</span>
+            <span class="a-text">
+              法人契約をご希望の場合でも、手続き方法は個人契約と大きく変わりません。<br>
+              オンラインのお申し込みフォームからご入力いただく際に、「法人契約」を選択して、お進みください。<br>
+              なお、個人契約・法人契約にかかわらず、ご入居者様は全員、顔写真付き身分証明書のご提出が必須となっております。あらかじめご了承くださいませ。
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 申込・予約 -->
+    <section class="faq-category" data-category="application">
+      <h2 class="faq-category-title">
+        <span class="faq-category-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+        </span>
+        申込・予約について
+      </h2>
+
+      <div class="faq-item" data-keywords="予約 完了 契約 書面交付 確認">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span class="q-badge">Q</span>
+          <span class="q-text">予約を完了しているか、または契約締結後の書面交付状況を確認したい場合どうやって確認できますか？</span>
+          <svg class="q-toggle" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <span class="a-badge">A</span>
+            <span class="a-text">
+              予約の完了状況や契約締結後の書面交付状況は、Sumycaマイページから随時ご確認いただけます。<br>
+              ※マイページのご利用には初回登録が必要です。
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-keywords="申込フォーム 入力 誤り 修正">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span class="q-badge">Q</span>
+          <span class="q-text">申込フォームの入力に誤りがあった場合、どうすればいいですか？</span>
+          <svg class="q-toggle" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <span class="a-badge">A</span>
+            <span class="a-text">
+              申込フォームの入力内容に誤りがあった場合は、お客様ご自身で修正することはできかねます。<br>
+              誤りに気付かれた際は、速やかに弊社メールアドレスまでご連絡くださいませ。
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-keywords="申込フォーム 再入力 求められ">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span class="q-badge">Q</span>
+          <span class="q-text">申込フォームを再入力するよう求められましたが、なぜですか？</span>
+          <svg class="q-toggle" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <span class="a-badge">A</span>
+            <span class="a-text">
+              申込フォームを再入力いただく場合は、主に、お名前の綴りや、生年月日などの入力内容に誤りがあった場合です。<br>
+              特に、入居日が近い場合は、正確な情報で審査を進めるため、再入力をお願いすることがございます。<br>
+              ※審査の詳細については開示しておりませんが、再入力は手続きの正確性を確保するための対応です。ご理解のほど、よろしくお願いいたします。
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-keywords="キャンセル 変更 仮押さえ 予約">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span class="q-badge">Q</span>
+          <span class="q-text">予約（仮押さえ）をキャンセルしたり、内容を変更したい場合はどうすればいいですか？</span>
+          <svg class="q-toggle" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <span class="a-badge">A</span>
+            <span class="a-text">
+              予約（仮押さえ）のキャンセルや内容の変更は、すべてメールにて承っております。<br><br>
+              ・弊社と既にメールでやり取りがある場合は、そのメールにご返信の形より、お旨をお知らせください。<br>
+              ・弊社とまだメールでのやり取りがない場合は、ご予約番号とメールアドレスを記載の上、Sumycaトップページの「フォーム」もしくは「お問い合わせ」ボタンから、ご連絡くださいませ。<br><br>
+              ※ご契約内容によっては、キャンセル料が発生する場合がございます。<br>
+              ※空室状況によっては、日程の変更が難しい場合がございます。
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 契約内容・書類 -->
+    <section class="faq-category" data-category="contract">
+      <h2 class="faq-category-title">
+        <span class="faq-category-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+        </span>
+        契約内容・書類について
+      </h2>
+
+      <div class="faq-item" data-keywords="契約書面 確認 事前 テンプレート">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span class="q-badge">Q</span>
+          <span class="q-text">契約書面の内容を事前に確認したいのですが、どこで確認できますか？</span>
+          <svg class="q-toggle" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <span class="a-badge">A</span>
+            <span class="a-text">
+              契約書面の内容は、ご参考として、テンプレートをPDF形式でお送りすることが可能です。<br>
+              ご希望の場合は、メールにて、お気軽にお問い合わせくださいませ。
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-keywords="書類 不備 提出 申込">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span class="q-badge">Q</span>
+          <span class="q-text">申込時に提出した書類に不備があった場合、どうなりますか？</span>
+          <svg class="q-toggle" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <span class="a-badge">A</span>
+            <span class="a-text">
+              申込時に提出いただく書類に不備があった場合は、弊社から不足分のご提出をお願いすることがございます。<br>
+              指定の身分証明書や必要書類が揃わない場合は、ご予約をお承りできない場合がございますので、あらかじめご了承くださいませ。
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 入居前の最終確認 -->
+    <section class="faq-category" data-category="pre-checkin">
+      <h2 class="faq-category-title">
+        <span class="faq-category-icon">
+          <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        </span>
+        入居前の最終確認について
+      </h2>
+
+      <div class="faq-item" data-keywords="契約完了 チェックイン 準備 入居">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span class="q-badge">Q</span>
+          <span class="q-text">契約完了後、チェックインまでにどのような準備が必要ですか？</span>
+          <svg class="q-toggle" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <span class="a-badge">A</span>
+            <span class="a-text">
+              契約完了後、チェックインまでにお客様側で特別にご準備いただくことはございません。<br>
+              ご入室方法は、お支払い完了後、セキュリティ上の観点から、入居日の2日前にメールにてご案内いたします。<br>
+              ※チェックインは非対面式となります。
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-keywords="鍵 受け渡し 入居当日 流れ チェックイン">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span class="q-badge">Q</span>
+          <span class="q-text">鍵の受け渡しや入居当日の流れを教えてください。</span>
+          <svg class="q-toggle" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <span class="a-badge">A</span>
+            <span class="a-text">
+              チェックインから退去まで、すべて非対面式で行います。<br><br>
+              ①ご入居日の2日前に、メールでご入室方法（インストラクション）をお送りします。<br>
+              ②チェックイン当日、直接物件にお越しください。<br>
+              ③現地に設置されているキーボックス内に、鍵が設置されています。インストラクションに記載の暗証番号を入力して、鍵をお受け取りください。<br><br>
+              ※緊急時には、24時間対応の連絡窓口をご利用いただけます。チェックイン時のお困りごとは、インストラクションと併せてお送りするお電話番号までご連絡ください。<br>
+              ※夜10時以降のお電話は、対応までにお時間をいただく場合がございます。あらかじめご了承くださいませ。
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-keywords="ID パスワード 案内メール 届かない">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span class="q-badge">Q</span>
+          <span class="q-text">入居手続きに必要なIDやパスワードなどのご案内メールが届かない場合、どのように対処すればいいですか？</span>
+          <svg class="q-toggle" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <span class="a-badge">A</span>
+            <span class="a-text">
+              ご不便をおかけし申し訳ございません。その際は、ご予約サイトのメッセージ機能または、お電話にて、弊社まで直接お問い合わせくださいませ。
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 物件の利用・設備 -->
+    <section class="faq-category" data-category="facilities">
+      <h2 class="faq-category-title">
+        <span class="faq-category-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        </span>
+        物件の利用・設備について
+      </h2>
+
+      <div class="faq-item" data-keywords="設備 故障 Wi-Fi 水漏れ 連絡">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span class="q-badge">Q</span>
+          <span class="q-text">設備が故障した場合（Wi-Fiが繋がらない、水漏れなど）、どこに連絡すれば良いですか？</span>
+          <svg class="q-toggle" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <span class="a-badge">A</span>
+            <span class="a-text">
+              万一設備故障が発生した場合は、弊社の24時間対応の連絡窓口までご連絡ください。<br>
+              お電話番号は、ご入居日の2日前にメールでお送りするご入室方法（インストラクション）と併せてご案内いたします。
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- システム・その他 -->
+    <section class="faq-category" data-category="other">
+      <h2 class="faq-category-title">
+        <span class="faq-category-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
+        </span>
+        システム・その他について
+      </h2>
+
+      <div class="faq-item" data-keywords="Total Cost 総費用 表示 間違い ゲスト">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span class="q-badge">Q</span>
+          <span class="q-text">ゲスト向けの「Total Cost」（総費用）の表示が間違っている（ようだ）</span>
+          <svg class="q-toggle" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <span class="a-badge">A</span>
+            <span class="a-text">
+              ご不便をおかけし申し訳ございません。表示されている総費用に誤りがある場合は、該当箇所のスクリーンショットをメールでお送りいただき、詳細を確認の上、対応いたします。<br><br>
+              ※サイトに掲載している価格は年間を通じた最低料金を表示しております。実際のご案内価格はシーズンにより変動する場合がございますので、あらかじめご了承くださいませ。
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-keywords="サイト 操作方法 検索 使い方">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span class="q-badge">Q</span>
+          <span class="q-text">サイトの操作方法について教えてほしい。</span>
+          <svg class="q-toggle" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <span class="a-badge">A</span>
+            <span class="a-text">
+              Sumycaのトップページから、地域や駅名、日付、ご利用人数をご入力の上、「検索」ボタンを押すと物件一覧が表示されます。気になる物件がございましたら、各物件の詳細ページから個別に空室状況をお問い合わせください。<br><br>
+              なお、当社の物件は複数のプラットフォームに掲載しており、繁忙期は需要が高まるため、予約が早く埋まる傾向があります。空室状況は常に最新情報を反映できるよう努めておりますが、更新が間に合わない場合がございます。あらかじめご了承ください。<br><br>
+              ご希望条件に合う物件のご紹介をご希望の場合は、Sumycaトップページの「フォーム」もしくは「お問い合わせ」ボタンから、詳細条件をご記入の上お問い合わせください。<br>
+              ※ご希望条件に合う物件がない場合は、返信できない場合がございます。あらかじめご了承ください。
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-keywords="特定 物件 追加情報 詳細">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span class="q-badge">Q</span>
+          <span class="q-text">特定の物件に関する追加情報が欲しい。</span>
+          <svg class="q-toggle" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <span class="a-badge">A</span>
+            <span class="a-text">
+              特定の物件について、不明な点がある場合は、各物件の詳細ページから、メールアドレスをご入力の上、個別にお問い合わせください。<br>
+              なお、設備や備品については、整備等により変更がある場合がございます。個別の回答は承っておりますので、あらかじめご了承くださいませ。
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-keywords="問い合わせ 一般 サービス ワークスタイリング">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span class="q-badge">Q</span>
+          <span class="q-text">その他の一般的なお問い合わせ（例：ワークスタイリングなど提供サービスについてのお問い合わせ）</span>
+          <svg class="q-toggle" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <span class="a-badge">A</span>
+            <span class="a-text">
+              その他何かご不明な点がございましたら、お電話またはSumycaトップページの「フォーム」もしくは「お問い合わせ」ボタンから、お気軽にお問い合わせくださいませ。
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <h2>解決しない場合はお気軽にお問い合わせください</h2>
+    <p>担当者がご質問に丁寧にお答えいたします</p>
+    <div class="cta-buttons">
+      <a href="https://www.sumyca.com/" class="cta-btn cta-btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        お問い合わせフォーム
+      </a>
+      <a href="https://www.sumyca.com/" class="cta-btn cta-btn-secondary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        物件を探す
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">Sumyca</div>
+      <div class="footer-links">
+        <a href="https://www.sumyca.com/">トップページ</a>
+        <a href="#">ご利用ガイド</a>
+        <a href="#">会社概要</a>
+        <a href="#">プライバシーポリシー</a>
+        <a href="#">特定商取引法に基づく表記</a>
+      </div>
+      <p class="footer-copy">&copy; matsuri technologies Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle FAQ accordion
+    function toggleFAQ(el) {
+      const item = el.parentElement;
+      const wasOpen = item.classList.contains('open');
+
+      // Close all items in the same category
+      const category = item.closest('.faq-category');
+      category.querySelectorAll('.faq-item.open').forEach(function(openItem) {
+        openItem.classList.remove('open');
+      });
+
+      // Toggle clicked item
+      if (!wasOpen) {
+        item.classList.add('open');
+      }
+    }
+
+    // Filter by category
+    function filterCategory(category, btn) {
+      // Update active tab
+      document.querySelectorAll('.category-tab').forEach(function(tab) {
+        tab.classList.remove('active');
+      });
+      btn.classList.add('active');
+
+      // Show/hide categories
+      document.querySelectorAll('.faq-category').forEach(function(section) {
+        if (category === 'all' || section.dataset.category === category) {
+          section.style.display = '';
+        } else {
+          section.style.display = 'none';
+        }
+      });
+
+      // Clear search
+      document.getElementById('searchInput').value = '';
+      document.querySelectorAll('.faq-item').forEach(function(item) {
+        item.style.display = '';
+      });
+    }
+
+    // Search / filter FAQ
+    function filterFAQ(query) {
+      query = query.trim().toLowerCase();
+
+      // Reset category filter
+      document.querySelectorAll('.category-tab').forEach(function(tab) {
+        tab.classList.remove('active');
+      });
+      document.querySelector('.category-tab').classList.add('active');
+      document.querySelectorAll('.faq-category').forEach(function(section) {
+        section.style.display = '';
+      });
+
+      if (!query) {
+        document.querySelectorAll('.faq-item').forEach(function(item) {
+          item.style.display = '';
+        });
+        document.querySelectorAll('.faq-category').forEach(function(section) {
+          section.style.display = '';
+        });
+        return;
+      }
+
+      document.querySelectorAll('.faq-category').forEach(function(section) {
+        let hasVisible = false;
+        section.querySelectorAll('.faq-item').forEach(function(item) {
+          var text = item.textContent.toLowerCase();
+          var keywords = (item.dataset.keywords || '').toLowerCase();
+          if (text.indexOf(query) !== -1 || keywords.indexOf(query) !== -1) {
+            item.style.display = '';
+            hasVisible = true;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+        section.style.display = hasVisible ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
